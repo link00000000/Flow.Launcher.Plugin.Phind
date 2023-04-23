@@ -1,6 +1,34 @@
 {
-  "name": "HelloWorldNodeJS",
-  "dependencies": {
-    "open": "^8.4.0"
-  }
+    "name": "flow-launcher-plugin-phind",
+    "productName": "Flow.Launcher.Plugin.Phind",
+    "main": "./build/index.ts",
+    "author": {
+        "name": "Logan Crandall",
+        "email": "logan@accidentallycoded.com",
+        "url": "accidentallycoded.com"
+    },
+    "version": "1.0.0",
+    "description": "Phind integration for FlowLauncher",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/link00000000/Flow.Launcher.Plugin.Phind"
+    },
+    "scripts": {
+        "build": "tsc",
+        "archive": "zip --source=. --destination=. --name=Flow.Launcher.Plugin.Phind.zip --info=true",
+        "lint": "xo",
+        "lint-fix": "xo --fix",
+        "preplugin-json": "tsc --resolveJsonModule --esModuleInterop plugin-json.ts",
+        "plugin-json": "node plugin-json.js"
+    },
+    "dependencies": {
+        "flow-launcher-helper": "^2.2.0",
+        "open": "^8.4.0"
+    },
+    "devDependencies": {
+        "@types/node": "^18.15.13",
+        "npm-build-zip": "^1.0.3",
+        "typescript": "^5.0.4",
+        "xo": "^0.54.1"
+    }
 }

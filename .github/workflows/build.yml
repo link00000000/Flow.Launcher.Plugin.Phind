@@ -3,7 +3,7 @@ name: Publish Release
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [main]
     paths-ignore: 
       - .github/workflows/*
 
@@ -23,7 +23,7 @@ jobs:
         with: 
           path: 'plugin.json'
           prop_path: 'Version'
-      - run: echo ${{steps.version.outputs.prop}} 
+      - run: echo ${{ steps.version.outputs.prop }}
       - name: Install dependencies
         run: |
           npm install
